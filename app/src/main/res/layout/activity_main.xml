@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bluedraw">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--            <FrameLayout-->
+            <!--                android:id="@+id/findmap"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent" />-->
+
+            <!--            <FrameLayout-->
+            <!--                android:id="@+id/findaddress"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent" />-->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_3sdp">
+
+                <ImageView
+                    android:id="@+id/findcity"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:hint="@string/city"
+                    android:paddingLeft="@dimen/_2sdp"
+                    android:src="@drawable/find"
+                    android:textSize="@dimen/_15sdp" />
+                <EditText
+                    android:id="@+id/etfindcity"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_toLeftOf="@id/findcity"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:background="@drawable/trongsuot"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/here"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_toLeftOf="@id/etfindcity"
+                    android:src="@drawable/here"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/maps"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_toLeftOf="@id/here"
+                    android:src="@drawable/map"
+                    android:visibility="visible"/>
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/groupweather"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:background="@drawable/trongsuot"
+                    android:layout_centerHorizontal="true">
+                    <ImageView
+
+
+                        android:id="@+id/imagewerther"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:src="@drawable/windy" />
+
+                    <TextView
+                        android:id="@+id/celsius"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imagewerther"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text="30"
+                        android:textSize="@dimen/_20sdp" />
+
+                    <TextView
+                        android:id="@+id/weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/celsius"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text="@string/clouds"
+                        android:textSize="@dimen/_20sdp" />
+                    <TextView
+                        android:id="@+id/cityShow"
+                        android:layout_below="@id/weather"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ho Chi Minh City"
+                        android:textSize="@dimen/_20sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/now"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cityShow"
+                        android:layout_centerHorizontal="true"
+                        android:text="now"
+                        android:textSize="@dimen/_20sdp" />
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/group"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_below="@id/groupweather"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:src="@drawable/rain_drop" />
+
+                        <TextView
+                            android:id="@+id/doAm"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_60sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="58%"
+                            android:textSize="@dimen/_25sdp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:src="@drawable/cloud" />
+
+                        <TextView
+                            android:id="@+id/pcloud"
+                            android:layout_marginTop="@dimen/_60sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="58%"
+                            android:textSize="@dimen/_25sdp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:src="@drawable/windy" />
+
+                        <TextView
+                            android:id="@+id/tocdogio"
+                            android:layout_marginTop="@dimen/_60sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.1m/s"
+                            android:textSize="@dimen/_25sdp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/theogio"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:orientation="horizontal">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/theongay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_125sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/cac_ngay_tiep"
+                android:textSize="@dimen/_20sdp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
